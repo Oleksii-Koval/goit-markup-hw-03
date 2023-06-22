@@ -6,6 +6,7 @@
   --sample-text: #434455;
   --activelinkcolor: #404bbf;
   --activebglink: #ffffff;
+  --cornflower: #e7e9fc;
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -67,6 +68,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid var(--cornflower);
 }
 .footer-logo-accent {
   color: var(--background-color);
@@ -125,12 +127,11 @@ p {
 /*------------ Web studio -------------*/
 
 /* Hero styles */
-.hero-conteiner {
-  padding-bottom: 60px;
-}
 .hero {
   background-color: var(--sample-items-color);
   color: var(--activebglink);
+}
+.hero-conteiner {
 }
 .hero-name {
   font-weight: 700;
@@ -141,15 +142,6 @@ p {
   padding-top: 188px;
   padding-bottom: 48px;
 }
-
-.hero {
-  height: 600px;
-}
-.hero-button-conteiner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .hero-button {
   background-color: var(--filter-color);
   color: inherit;
@@ -159,6 +151,8 @@ p {
   cursor: pointer;
   padding: 16px 32px;
   border-radius: 4px;
+  display: block;
+  margin: 0 auto;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -172,7 +166,7 @@ p {
   justify-content: center;
 }
 .actions-list-item {
-  width: 264px;
+  min-width: 264px;
 }
 .actions-list-item:not(:last-child) {
   margin-right: 24px;
