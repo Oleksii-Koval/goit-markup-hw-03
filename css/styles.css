@@ -16,6 +16,9 @@ body {
 }
 
 /* reset */
+ul {
+  margin: 0;
+}
 
 h1,
 h2,
@@ -130,8 +133,15 @@ p {
 .hero {
   background-color: var(--sample-items-color);
   color: var(--activebglink);
+  margin-bottom: 60px;
 }
 .hero-conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding-top: 188px;
+  height: 600px;
 }
 .hero-name {
   font-weight: 700;
@@ -139,8 +149,6 @@ p {
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
-  padding-top: 188px;
-  padding-bottom: 48px;
 }
 .hero-button {
   background-color: var(--filter-color);
@@ -149,10 +157,9 @@ p {
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
-  padding: 16px 32px;
+  border: 4px;
   border-radius: 4px;
-  display: block;
-  margin: 0 auto;
+  padding: 16px 32px;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -160,16 +167,19 @@ p {
 }
 
 /* Busines Actions Styles */
-
 .actions-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+
+  column-gap: 24px;
 }
 .actions-list-item {
-  min-width: 264px;
+  display: flex;
+  width: 264px;
+  row-gap: 8px;
+  flex-direction: column;
 }
-.actions-list-item:not(:last-child) {
-  margin-right: 24px;
+.action-item-conteiner {
 }
 .title {
   font-weight: 500;
@@ -178,13 +188,8 @@ p {
   letter-spacing: 0.02em;
   color: var(--sample-items-color);
 }
-.actions-title {
-  margin-bottom: 8px;
-}
+
 /* section actions */
-.doing-conteiner {
-  height: 412px;
-}
 .doing-title {
   font-weight: 700;
   font-size: 36px;
@@ -193,16 +198,17 @@ p {
   text-transform: capitalize;
   letter-spacing: 0.02em;
   color: var(--sample-items-color);
+  padding-bottom: 72px;
+}
+.action-image {
+  max-width: 100%;
 }
 .doing-list {
   display: flex;
-  justify-content: space-between;
-  margin-top: 72px;
-  margin-bottom: 0;
+  flex-wrap: wrap;
+  column-gap: 24px;
 }
-.doing-list:not(:last-child) {
-  margin-right: 24px;
-}
+
 /* Team Cards Styles */
 
 .team-section {
