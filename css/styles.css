@@ -44,6 +44,9 @@ p {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+img {
+  display: block;
+}
 .link {
   text-decoration: none;
 }
@@ -51,7 +54,7 @@ p {
   list-style: none;
   padding-inline-start: 0;
 }
-.conteiner {
+.container {
   max-width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
@@ -74,22 +77,28 @@ p {
   text-transform: uppercase;
   color: var(--filter-color);
   padding: 1.5px 0;
-  margin-right: 76px;
 }
 .header-logo-accent {
   color: var(--sample-items-color);
 }
-.header-conteiner {
+.logo .header-logo-accent {
+  margin-right: 76px;
+}
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--cornflower);
+  border-bottom: 1px solid #e7e9fc;
 }
 .footer-logo-accent {
   color: var(--background-color);
 }
+.nav {
+  display: flex;
+  align-items: center;
+}
 .nav-list {
-  display: inline-flex;
+  display: flex;
   gap: 40px;
 }
 
@@ -111,7 +120,7 @@ p {
   font-style: normal;
 }
 .address-list {
-  display: inline-flex;
+  display: flex;
   gap: 40px;
   padding: 24px 0;
   margin: 0;
@@ -131,20 +140,19 @@ p {
 
 .footer {
   background-color: var(--sample-items-color);
+  padding: 100px 0;
 }
-.footer-conteiner {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  padding-left: 156px;
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
 }
+
 .footer-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--background-color);
+  max-width: 264px;
 }
 
 /*------------ Web studio -------------*/
@@ -153,14 +161,14 @@ p {
 .hero {
   background-color: var(--sample-items-color);
   color: var(--activebglink);
+  padding: 188px 0;
 }
-.hero-conteiner {
+.hero-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 48px;
-  padding-top: 188px;
-  height: 600px;
 }
 .hero-name {
   font-weight: 700;
@@ -168,6 +176,7 @@ p {
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
+  max-width: 496px;
 }
 .hero-button {
   background-color: var(--filter-color);
@@ -179,6 +188,7 @@ p {
   border: 4px;
   border-radius: 4px;
   padding: 16px 32px;
+  min-width: 169px;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -189,16 +199,16 @@ p {
 .actions-list {
   display: flex;
   flex-wrap: wrap;
-
-  column-gap: 24px;
+  gap: 24px;
 }
 .actions-list-item {
   display: flex;
-  width: 264px;
-  row-gap: 8px;
+  width: calc((100% - 3 * 24px) / 4);
   flex-direction: column;
 }
-
+.actions-title {
+  margin-bottom: 8px;
+}
 .title {
   font-weight: 500;
   font-size: 20px;
@@ -212,7 +222,7 @@ p {
   letter-spacing: 0.02em;
   color: var(--sample-text);
 }
-/* section actions */
+/* Doing samples styles */
 .doing-title {
   font-weight: 700;
   font-size: 36px;
@@ -221,7 +231,7 @@ p {
   text-transform: capitalize;
   letter-spacing: 0.02em;
   color: var(--sample-items-color);
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 .doing-image {
   max-width: 100%;
@@ -229,9 +239,11 @@ p {
 .doing-list {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
+  gap: 24px;
 }
-
+.doing-list-item {
+  width: calc((100% - 2 * 24px) / 3);
+}
 /* Team Cards Styles */
 .card-image {
   display: block;
@@ -246,18 +258,20 @@ p {
   gap: 24px;
 }
 .team-card-item {
-  width: calc((100% - 24px * 3) / 4);
+  width: calc((100% - 3 * 24px) / 4);
   background-color: var(--activebglink);
+  border-radius: 0px 0px 4px 4px;
 }
 .card-text {
   text-align: center;
-  gap: 8px;
-  padding: 32px 0;
+  margin-bottom: 8px;
+  padding: 32px 16px;
 }
 /*------------- Portfolio --------------*/
 
 /* Filter buttons */
 .portfolio-section {
+  padding-top: 96px;
   padding-bottom: 120px;
 }
 .filter-button-list {
@@ -265,8 +279,7 @@ p {
   display: flex;
   justify-content: center;
   gap: 24px;
-  padding-top: 96px;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 .filter-button {
   font-family: 'Roboto', sans-serif;
@@ -285,6 +298,7 @@ p {
 .filter-button:focus {
   color: var(--activebglink);
   background-color: var(--activelinkcolor);
+  border: 1px solid transparent;
 }
 
 /* Sample of products */
@@ -295,6 +309,7 @@ p {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 .sample-list {
   display: flex;
@@ -304,12 +319,10 @@ p {
 }
 .sample-list-item {
   background-color: var(--activebglink);
+  width: calc((100% - 24px * 2) / 3);
 }
 .sample-card-text {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 32px 0;
+  padding: 32px 16px;
   border: 1px solid var(--cornflower, #e7e9fc);
   border-top: none;
   min-width: 360px;
