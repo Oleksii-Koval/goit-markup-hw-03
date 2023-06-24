@@ -131,6 +131,8 @@ p {
 
 .footer {
   background-color: var(--sample-items-color);
+}
+.footer-conteiner {
   display: flex;
   flex-direction: column;
   gap: 16px;
