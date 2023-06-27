@@ -224,6 +224,9 @@ img {
   color: var(--sample-text);
 }
 /* Doing samples styles */
+.saction-doing-samples {
+  padding-top: 0;
+}
 .doing-title {
   font-weight: 700;
   font-size: 36px;
